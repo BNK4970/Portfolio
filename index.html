@@ -1,0 +1,174 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNK's Portfolio</title>
+    <!-- link css -->
+        <link rel="stylesheet" type="text/css" href="/style/style.css">
+        <link rel="stylesheet" type="text/css" href="/style/root.css">
+        <link rel="stylesheet" type="text/css" href="/style/hero.css">
+        <link rel="stylesheet" type="text/css" href="/style/header.css">
+        <link rel="stylesheet" type="text/css" href="/style/link.css">
+        <link rel="stylesheet" type="text/css" href="/style/about.css">
+        <link rel="stylesheet" type="text/css" href="/style/leaveYourMark.css">
+        <link rel="stylesheet" type="text/css" href="/style/project.css">
+        <link rel="stylesheet" type="text/css" href="/style/contact.css">
+    <!-- link remix icon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body id="particles-js">
+
+    <!-- header -->
+    <header class='header '>
+        <!-- cote gauche -->
+        <div class="arborescence">
+            <!-- logo + bouton home -->
+            <a href="" class="title">BNK's Portfolio </a>
+            <!-- <h2 class="title" onClick="remove() ">BNK's Portfolio </h2> -->
+            <!-- texte de l'endroit où on se situe -->
+            <h2 class="sub"></h2>
+        </div>
+        <ul class="navLaptop">
+            <!-- navigation -->
+            <li><a href="#separationProjet" >À propos</a></li>
+            <li><a href="#separationContact">Projet</a></li>
+            <li><a href="#separationAbout" >contact</a></li>
+            <!-- download cv -->
+            <button>CV</button>
+        </ul>
+        <!-- burger nav -->
+        <div class="icon nav-icon-1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav">
+            <ul class="navUl">
+                <!-- navigation -->
+                <li><a href="#separationAbout" class="lienMobile">À propos</a></li>
+                <li><a href="#separationProjet" class="lienMobile">Projet</a></li>
+                <li><a href="#separationContact" class="lienMobile">contact</a></li>
+                <!-- download cv -->
+                <button>CV</button>
+            </ul>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class='hero'>
+        <!-- petit txt -->
+        <span>Salut, je m'appelle</span>
+        <!-- gros texte ( id + pseudo ) -->
+        <h1 class='big heading'>Enzo Cordovana</h1>
+        <h1 class='big heading'>Alias BNK</h1>
+        <!-- descrition de moi meme -->
+        <p class='heading'>
+            J'ai 18 ans et je suis en Première STI2D pour poursuivre vers un BUT informatique. 
+            <br>
+            J'ai commencé à programmer en autodidacte avec OpenClassRooms
+            <br>
+             et je me suis amélioré grâce à la pratique et des vidéos youtube.
+        </p>
+        <!-- btn vers un chat box -->
+        <button>Télécharger le CV !</button>
+    </section>
+    
+    <!-- separation -->
+    <span class="separation" id="separationAbout">
+    </span>
+
+    <!-- about -->
+    <section class="about " id="sectionAbout">
+        <div class="titleSection">
+            <h1>À propos</h1>
+        </div>
+        <div>
+            <div class="container">
+                <ul id="containerIlAbout">
+                        
+                </ul>
+            </div>
+            <button id="load-more">Voir plus !</button>
+        </div>
+    </section>
+
+    <!-- separation -->
+    <span class="separation" id="separationProjet">
+    </span>
+
+    <!-- project -->
+    <section class="containerProject " id="sectionProject"> 
+        <div class="titleSection">
+            <h1>projet</h1>
+        </div>
+        <div class="container" id="containerCardProject">
+        
+        </div>    
+    </section>  
+
+    <!-- separation -->
+    <span class="separation" id="separationContact">
+    </span>
+    
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="titleSection">
+            <h1>contact</h1>
+        </div>
+        <div>
+            <!-- titre -->
+            <h1>Prendre contact</h1>
+            <!-- paragraphe -->
+            <p>Ma boîte de réception est toujours ouverte. Que vous ayez une question à poser ou que vous souhaitiez simplement dire bonjour, je ferai de mon mieux pour vous répondre !</p>
+            <!-- lien qui redirige vers ma boite mail -->
+            <a href = "mailto:abc@example.com?subject = Feedback&body = Message">
+                Dire bonjour !
+            </a>
+        </div>
+    </section>
+ 
+    <!-- links -->
+    <div class='link'>
+        <!-- lien cote gauche -->
+        <div class="left lien">
+            <!-- ligne vertical -->
+            <div class="line"></div>
+            <a href="https://www.instagram.com/bnk4970/?hl=fr" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a href="https://github.com/BNK4970" target="_blank"><i class="ri-github-line"></i></a>
+        </div>
+        <!-- lien cote droite -->
+        <div class="right lien">
+            <!-- ligne vertical -->
+            <div class="line"></div>
+            <!-- mon mail -->
+            <a class='email' href = "mailto:abc@example.com?subject = Feedback&body = Message">
+                bnk4970@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p>Thème conçu et développé par BNK, inspiré par Brittany Chiang V4.</p>
+    </footer>
+
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/project.js"></script>
+
+    <!-- particle js -->
+    <script type="text/javascript" src="/particles.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+
+    <!-- about -->
+    <script type="text/javascript" src="/js/about.js"></script>
+    
+</body>
+</html>
