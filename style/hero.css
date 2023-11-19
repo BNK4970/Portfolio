@@ -1,0 +1,61 @@
+.hero {
+  padding: 25px 30px;
+  height: auto;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  background-color: transparent;
+  margin: 10% 0% 5%;
+}
+.hero .big {
+  font-size: var(--sizeTitle);
+}
+.hero span {
+  font-weight: var(--weightMoyen);
+}
+.hero .heading {
+  font-family: "calibre", "poppins";
+}
+.hero button {
+  background-color: transparent;
+  color: var(--colorMain);
+  font-weight: bold;
+  border: var(--btn);
+  border-radius: var(--btnBorderRadius);
+  padding: var(--paddingButton);
+  text-transform: capitalize;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+  font-size: var(--BodyText);
+  margin-top: 30px;
+}
+.hero button:hover {
+  background-color: var(--colorMainHover);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+/* responsive */
+/* mobile S to mobile L */
+
+/* toggle */
+.none {
+  display: none;
+}
+
+@media screen and (max-width:768px) {
+.hero {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+}
+
+@media screen and (max-width:633px) {
+.hero .big {
+  font-size: 50px;
+}
+}

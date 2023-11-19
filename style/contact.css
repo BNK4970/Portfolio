@@ -1,0 +1,73 @@
+.contact { 
+  -ms-grid-row: 8; 
+      grid-row-start: 8;
+  min-height: 70vh;
+  border: none;
+}
+.contact div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  height: 100%;
+  border-radius: var(--borderRadiusDiv);
+  border: var(--borderDiv);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(17, 17, 17, 0.7);
+}
+  .contact h1 {
+    text-transform: capitalize;
+  }
+  .contact p {
+    margin: 0px 70px;
+    text-align: center;
+    font-size: var(--sizeTextContent);
+  }
+  .contact a:hover {
+    background-color: var(--colorMainHover);
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+  }
+  .contact a {
+    color: var(--colorMain);
+    background-color: transparent;
+    border: var(--btn);
+    border-radius: var(--btnBorderRadius);
+    padding: 1em 3em;
+    text-transform: capitalize;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: var(--sizeTextDescription);
+    font-weight: var(--weightMoyen);
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+  /* toggle */
+  .none {
+    display: none;
+  }
+
+  /* responsive */
+@media screen and (max-width:768px) {
+  .contact {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 8 / 2 / 9 / 3; 
+    margin: 5% 0px;
+  }
+}

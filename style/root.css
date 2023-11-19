@@ -1,0 +1,37 @@
+:root {
+    /* background */
+--backgroundBody: #111111;
+--backgroundContainer: #151515;
+--backgroundDiv: #202020;
+
+    /* color text*/
+--colorTextTitle: #E5E5E5;
+--colorText: #888;
+--colorTextTag: #e5e5e542;
+
+    /* color main */
+--colorMain: #be19c4;
+--colorMainHover: rgba(190, 25, 196, 0.15);
+
+    /* border */
+--btn: 2px solid #be19c4;
+--btnBorderRadius: 6px;
+--borderRadiusDiv: 12px;
+--borderDiv: 2px solid #202020;
+
+/* padding */
+--paddingButton: 1em 3em;
+
+    /* font-size */
+--sizeTitlev2:40px;
+--sizeTitle:80px;
+--sizeTextTitle:24px;
+--sizeTextContent:20px;
+--sizeTextDescription:16px;
+--sizeTextTag:14px;
+
+    /* font-weight */
+--weightGros: bolder;
+--weightMoyen: bold;
+--weightNormal: normal;
+}
