@@ -1,0 +1,21 @@
+---
+interface Props {
+    color: 'primary' | 'secondary' | 'accent' ;
+}
+const {color} = Astro.props
+const bgColor = () => {
+    switch (color) {
+    case 'primary':
+        return 'darkPrimary';
+    case 'secondary':
+        return 'darkSecondary';
+    case 'accent':
+        return 'darkAccent';
+}
+}
+
+---
+
+<span class=`size-2 rounded-full bg-darkPrimary`>
+
+</span>

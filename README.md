@@ -52,3 +52,84 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+---
+
+
+
+1. Index (Accueil)
+Enzo Cordovana
+Développeur Web & Étudiant en Informatique
+
+Bienvenue sur mon portfolio. Je suis Enzo Cordovana, étudiant en première année de BUT Informatique à l'IUT d'Aix. Passionné par le développement web, je crée des sites web pour m'exercer et approfondir mes compétences. Actuellement, je me concentre sur l'amélioration de mes compétences et sur l'intégration d'API comme GitHub pour enrichir mes projets.
+
+Projets principaux :
+(Note : Tu pourras ici afficher des vignettes cliquables pour tes projets une fois qu'ils seront disponibles.)
+
+Projet 1 : ...
+Projet 2 : ...
+Projet 3 : ...
+2. About (À propos)
+À propos de moi
+
+Je m'appelle Enzo Cordovana, et je suis actuellement étudiant en première année de BUT Informatique à l'IUT d'Aix. Avant d'intégrer ce programme, j'ai obtenu un BAC STI2D avec une option en Systèmes d'Information et Numérique (SIN), ce qui m'a permis de développer une solide base en informatique.
+
+Mon parcours universitaire actuel me permet de me spécialiser en développement web, un domaine qui me passionne particulièrement. J'aime concevoir des sites web et explorer de nouvelles technologies pour créer des solutions innovantes.
+
+Compétences :
+
+Langages de programmation : (ex. : HTML, CSS, JavaScript, etc. à préciser selon ton expérience)
+Outils/Logiciels : VSCode, Obsidian
+Autres compétences : (à préciser si besoin)
+Je m'efforce constamment de m'améliorer et de découvrir de nouveaux outils et méthodes pour optimiser mes projets. Actuellement, je travaille sur l'intégration de l'API GitHub pour enrichir mes projets web.
+
+3. Projets (Portfolio)
+(Une fois que tu auras des projets à partager, tu pourras les présenter ici.)
+
+Projet 1 : ...
+
+Client/Entreprise : (si applicable)
+Date :
+Mon rôle :
+Objectifs du projet :
+Solutions apportées :
+Résultats obtenus :
+Visuels associés : (captures d'écran, maquettes, etc.)
+(Tu pourras répéter ce format pour chaque projet que tu souhaites mettre en avant.)
+
+4. Contact
+Si tu souhaites discuter ou simplement me suivre, voici comment me contacter :
+
+Email : enzo.cordovana@etu.univ-amu.fr
+Réseaux sociaux :
+[LinkedIn](ton lien LinkedIn)
+[Instagram](ton lien Instagram)
+
+
+
+
+colors: {
+				'text': 'rgb(var(--text))',
+				'background': 'rgb(var(--background))',
+				'primary': 'rgb(var(--primary))',
+				'secondary': 'rgb(var(--secondary))',
+				'accent': 'rgb(var(--accent))',
+			},
+			fontSize: {
+				sm: '0.800rem',
+				base: '1rem',
+				xl: '1.250rem',
+				'2xl': '1.563rem',
+				'3xl': '1.954rem',
+				'4xl': '2.442rem',
+				'5xl': '3.053rem',
+			},
+			fontFamily: {
+				heading: 'Bebas Neue',
+				body: 'Poppins',
+			},
+			fontWeight: {
+				normal: '400',
+				bold: '700',
+			},

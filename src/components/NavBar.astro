@@ -1,0 +1,16 @@
+---
+import { NAVBAR } from "../data";
+import '../base.css'
+---
+
+<header class="text-darkText bg-background grid grid-cols-[1fr_auto_1fr] h-20 items-center fixed top-0 left-[50%] translate-x-[-50%] px-8 rounded-md mt-8 z-50 bg-[rgb(var(--color-background),0.5)] backdrop-blur-[2px] w-[70%] border-2 border-[#202020]">
+    <h1 class="font-heading font-bold text-2xl bg-gradient-to-r from-indigo-500 darkPrimary to-darkAccent inline-block text-transparent bg-clip-text">{NAVBAR.title}</h1>
+    <ul class="flex gap-8 w-fit justify-center items-center">
+        {NAVBAR.navigation.map((name, index)=>(
+            <li>
+                <a href={index === 0 ? '/' : `#${name.root}`} class="duration-200 text-darkForeground hover:text-darkPrimary">{name.label}</a>
+            </li>
+        ))}
+    </ul>
+    <p class="col-span-1 ml-auto">toggle theme</p>
+</header>

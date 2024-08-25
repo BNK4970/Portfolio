@@ -1,0 +1,28 @@
+/* font title */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-foreground: 229, 229, 229;  /*#E5E5E5*/
+    --color-background: 15, 14, 14;     /*#0f0e0e*/
+
+    --color-primary: 95, 36, 243;       /*#5f24f3*/
+    --color-secondary: 142, 68, 173;      /*#9B59B6*/
+    --color-accent: 242, 198, 160;      /*#6C3483*/
+
+    --color-success: 67, 160, 71;       /*#43A047*/
+    --color-warning: 251, 140, 0;       /*#FB8C00*/
+    --color-danger: 229, 57, 53;        /*#E53935*/
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Police pour le corps du texte */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Russo One', sans-serif; /* Police pour les titres */
+    letter-spacing: 0.05cap;
+}

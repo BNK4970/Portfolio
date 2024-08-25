@@ -1,0 +1,46 @@
+---
+interface Props {
+    color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+    variant?: 'solid' | 'light';
+    addClassName?: string;
+}
+
+// Extraction des propriétés
+const { color, variant, addClassName } = Astro.props as Props;
+
+const getColorClasses = (): string => {
+    switch (color) {
+      case "primary":
+        return "var(--color-primary)"; // RGB equivalent of #
+      case "secondary":
+        return "var(--color-secondary)"; // RGB equivalent of #
+      case "success":
+        return "var(--color-success)"; // RGB equivalent of #28A745
+      case "warning":
+        return "var(--color-warning)"; // RGB equivalent of #FFC107
+      case "danger":
+        return "var(--color-danger)"; // RGB equivalent of #DC3545
+      default:
+        return "229, 229, 229"; // RGB equivalent of #E5E5E5
+    }
+};
+const getVariantClasses = () => {
+    switch (variant) {
+      case "solid":
+        return `duration-300 bg-[rgb(var(--color),1)] hover:bg-[rgb(var(--color),0.8)] text-white`;
+      case "light":
+        return `duration-300 text-[rgb(var(--color))] hover:bg-[rgb(var(--color),0.2)]`;
+      default:
+        return ``;
+    }
+};
+
+const colorValue = getColorClasses();
+  const colorStyle = { "--color": colorValue } as React.CSSProperties;
+  const classes = `inline-flex items-center ${getColorClasses()} ${getVariantClasses()}`;
+---
+
+<!-- Utilisation de la classe CSS déterminée dynamiquement -->
+<button style={colorStyle} className={`${classes} ${addClassName} px-6 py-2 text-lg rounded-md`}>
+    <slot/>
+</button>
