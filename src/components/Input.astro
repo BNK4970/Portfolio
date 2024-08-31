@@ -1,0 +1,51 @@
+---
+interface Props {
+    label?: boolean;
+    placeholder?: string;
+    name: string;
+    type?: astroHTML.JSX.HTMLInputTypeAttribute | null | undefined;
+    element: 'textArea' | 'input';
+}
+
+const { label, placeholder, name, type, element } = Astro.props;
+
+const inputStyle = 'rounded-md border-2 border-[#202020] bg-transparent p-3'
+const textAreaStyle = 'rounded-md border-2 border-[#202020] bg-transparent p-3 w-full'
+---
+
+<>
+{label ? (
+    <div class="flex flex-col gap-1 w-full">
+        <label for={name} class="capitalize">
+            <slot />
+        </label>
+        {element === 'textArea' ? (
+            <textarea
+                name={name}
+                class=`${textAreaStyle}`
+                placeholder={placeholder}
+            ></textarea>
+        ) : (
+            <input
+                name={name}
+                placeholder={placeholder}
+                type={type}
+                class=`${inputStyle}`
+            />
+        )}
+    </div>
+) : element === 'textArea' ? (
+    <textarea
+        name={name}
+        class=`${textAreaStyle}`
+        placeholder={placeholder}
+    ></textarea>
+) : (
+    <input
+        name={name}
+        placeholder={placeholder}
+        type={type}
+        class=`${inputStyle}`
+    />
+)}
+</>

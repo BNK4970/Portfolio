@@ -1,0 +1,37 @@
+---
+import Card from "../Card.astro"
+import { getRepositories } from "../../github";
+const selectName = ["TemplateTwo", "SafetyCard", "Cyphub3D"];
+
+const repos = await getRepositories();
+// Filtrer les repositories en fonction des IDs sélectionnés
+const filteredRepos = repos.filter((repo: { name: any }) =>
+  selectName.includes(repo.name)
+);
+---
+<Card addStyleParent="w-full col-start-1 col-span-3">
+    <p>Projets</p>
+    <h1 class="text-4xl uppercase text-darkPrimary">
+      Mes meilleurs projets :
+    </h1>
+  </Card>
+  <!-- 3 projets -->
+  {
+    filteredRepos.map((repo: any) => (
+      <Card addStyleParent="w-full col-span-1 h-full">
+        <div class="flex flex-col gap-2">
+          <img src="" alt="" class="w-full aspect-video bg-primary" />
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-darkPrimary text-xl">{repo.name}</h2>
+              <a href={repo.html_url}>Github</a>
+            </div>
+            <p>{repo.description || "No description"}</p>
+            <ul class="flex gap-1">
+              <li class="bg-darkPrimary rounded-md px-2">{repo.language}</li>
+            </ul>
+          </div>
+        </div>
+      </Card>
+    ))
+  }

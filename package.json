@@ -14,8 +14,15 @@
     "@astrojs/tailwind": "^5.1.0",
     "@types/react": "^18.3.4",
     "astro": "^4.14.5",
+    "axios": "^1.7.5",
     "lucide-react": "^0.435.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.10",
+    "three": "^0.168.0",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/three": "^0.168.0"
   }
 }

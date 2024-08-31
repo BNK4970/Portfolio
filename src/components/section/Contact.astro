@@ -1,0 +1,69 @@
+---
+import Card from "../Card.astro"
+import Input from "../Input.astro"
+import Button from "../Button.astro"
+---
+<>
+<!-- left -->
+<Card>
+    <div>
+      <div>
+        <p>Contact</p>
+        <h1 class="text-4xl uppercase text-darkPrimary">Get in touch</h1>
+        <p>
+          Si tu souhaites discuter ou simplement me suivre, voici comment me
+          contacter :
+        </p>
+      </div>
+      <form action="" method="post" class="flex flex-col gap-4 pt-4">
+        <div class="flex items-center justify-between gap-4">
+          <!-- first name -->
+          <Input
+            element="input"
+            label={true}
+            name="firstName"
+            type="text"
+            placeholder="Enzo">First name :</Input
+          >
+          <!-- last name -->
+          <Input
+            element="input"
+            label={true}
+            name="lastName"
+            type="text"
+            placeholder="Cordovana">Last name :</Input
+          >
+        </div>
+        <!-- email -->
+        <Input
+          element="input"
+          label={true}
+          name="emailUser"
+          type="email"
+          placeholder="BNK4970@exemple.com">Email :</Input
+        >
+        <!-- message -->
+        <Input
+          element="textArea"
+          label={true}
+          name="emailUser"
+          placeholder="Your message...">Message :</Input
+        >
+        <Button
+          color="primary"
+          variant="solid"
+          addClassName="w-full grid place-items-center"
+        >
+          Send message
+        </Button>
+      </form>
+    </div>
+  </Card>
+  <Card>
+    <ul>
+      <li>Github</li>
+      <li>Linkedln</li>
+      <li>Instagram</li>
+    </ul>
+  </Card>
+  </>

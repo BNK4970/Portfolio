@@ -1,86 +1,93 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
-import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
+import Hero from "../components/section/Hero.astro";
+import Projects from "../components/section/Projects.astro";
+import Contact from "../components/section/Contact.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main
-    class="h-auto px-[15%] grid grid-cols-1 grid-rows-6 gap-20 place-items-center text-darkForeground"
+    class="h-auto px-[15%] grid grid-cols-1 grid-rows-5 gap-20 place-items-center text-darkForeground"
   >
     <NavBar />
     <!-- hero -->
-    <!-- hello -->
-    <section class="w-full h-screen grid grid-cols-2 grid-rows-1 place-items-center gap-8">
-      <!-- gauche -->
-      <Card>
-        <div class="flex flex-col gap-4">
-          <p class="text-xl">Hello there, my name is</p>
-          <h1 class="text-6xl text-darkPrimary">Cordovana Enzo</h1>
-          <div class="flex items-center text-nowrap gap-4">
-            <div class="w-full h-[2px] bg-darkForeground"></div>
-            <p class="text-xl font-semibold">Font-end Web Developer</p>
-          </div>
-        </div>
-        <!-- intro -->
-        <p class="text-md">
-          I'm a student in my first year of a Computer Science degree at the IUT
-          in Aix-en-Provence.
-        </p>
-        <!-- btns -->
-        <div class="flex gap-6">
-          <Button color="primary" variant="solid">Say Hello!</Button>
-          <Button color="primary" variant="light">My projects</Button>
-        </div>
-      </Card>
-      <!-- droite -->
-      <div class="w-full h-fit grid place-items-center">
-        <Card addStyleParent="relative">
-          <img src="" class="w-[250px] aspect-[1/1.5] rounded-sm bg-darkPrimary" alt="photo de moi">
-          <!-- data -->
-          <Card addStyleParent="absolute top-[-30px] left-[-115px]">
-            <!-- projets -->
-            <div>
-              <p class="text-nowrap font-semibold">Projets :</p>
-              <span class="text-darkPrimary font-heading text-4xl">12</span>
-            </div>
-            <!-- line -->
-            <div class="h-[2px] w-full bg-darkForeground"></div>
-            <!-- clients -->
-            <div>
-              <p class="text-nowrap font-semibold">Clients :</p>
-              <span class="text-darkPrimary font-heading text-4xl">2</span>
-            </div>
-          </Card>
-          <!-- rating -->
-          <Card addStyleParent="absolute bottom-[-30px] right-[-110px]">
-            <div>
-              <p class="text-nowrap font-semibold">Score :</p>
-              <span class="text-darkPrimary font-heading text-4xl">4.5</span>
-            </div>
-          </Card>
-        </Card>
-      </div>
+    <section
+      class="w-full h-screen grid grid-cols-2 grid-rows-1 place-items-center gap-8"
+    >
+      <Hero/>
     </section>
 
     <!-- about -->
-    <section class="">
-1
-    </section>
-
-    <!-- à propos -->
-    <section>2</section>
+    <section class="">à propos</section>
 
     <!-- compétences -->
-    <section>3</section>
+    <section>compétences</section>
 
     <!-- projets -->
-    <section>4</section>
+    <section class="w-full grid grid-cols-3 grid-rows-[1fr_2fr] gap-4 h-fit">
+      <Projects/>
+    </section>
 
     <!-- contact -->
-    <section>5</section>
+    <section id="contact" class="grid grid-cols-2">
+      <Contact/>
+    </section>
   </main>
+  <canvas id="canvas" class="absolute top-0 left-0 -z-50"></canvas>
+  <script>
+    import * as THREE from 'three';
+    // Sélectionne le canvas par son ID
+const canvas = document.getElementById('canvas');
+if (!canvas) {
+    throw new Error('Canvas element with id "canvas" not found.');
+}
+
+// Création de la scène
+const scene = new THREE.Scene();
+
+// Création de la caméra
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+
+// Création du rendu
+const renderer = new THREE.WebGLRenderer({canvas, antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// Création d'une géométrie (ex: particules)
+const geometry = new THREE.BufferGeometry();
+const vertices = [];
+for (let i = 0; i < 1000; i++) {
+    vertices.push((Math.random() - 0.5) * 10);
+    vertices.push((Math.random() - 0.5) * 10);
+    vertices.push((Math.random() - 0.5) * 10);
+}
+geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+const material = new THREE.PointsMaterial({ color: 0x8a2be2, size: 0.01 });
+const particles = new THREE.Points(geometry, material);
+scene.add(particles);
+
+// Fonction d'animation
+function animate() {
+    requestAnimationFrame(animate);
+    particles.rotation.y += 0.0001;
+    particles.rotation.x += 0.0001;
+    particles.rotation.z -= 0.0001;
+    renderer.render(scene, camera);
+}
+
+// Ajuster la taille du rendu lors du redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+});
+
+animate();
+
+  </script>
 </Layout>
 
 <style>
@@ -126,5 +133,10 @@ import Card from "../components/Card.astro";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
+  }
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 </style>

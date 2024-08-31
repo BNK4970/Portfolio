@@ -1,0 +1,61 @@
+---
+import Card from "../Card.astro"
+import Button from "../Button.astro"
+
+import { getRepositories } from "../../github";
+const repos = await getRepositories();
+---
+
+<!-- gauche -->
+<Card>
+    <div class="flex flex-col gap-4">
+      <p class="text-xl">Hello there, my name is</p>
+      <h1 class="text-6xl text-darkPrimary">Cordovana Enzo</h1>
+      <div class="flex items-center text-nowrap gap-4">
+        <div class="w-full h-[2px] bg-darkForeground"></div>
+        <p class="text-xl font-semibold">Font-end Web Developer</p>
+      </div>
+    </div>
+    <!-- intro -->
+    <p class="text-md">
+      I'm a student in my first year of a Computer Science degree at the IUT
+      in Aix-en-Provence.
+    </p>
+    <!-- btns -->
+    <div class="flex gap-6">
+      <Button color="primary" variant="solid">Say Hello!</Button>
+      <Button color="primary" variant="light">My projects</Button>
+    </div>
+  </Card>
+  <!-- droite -->
+  <div class="w-full h-fit grid place-items-center">
+    <Card addStyleParent="relative">
+      <img
+        src=""
+        class="w-[250px] aspect-[1/1.5] rounded-sm bg-darkPrimary"
+        alt="photo de moi"
+      />
+      <!-- data -->
+      <Card addStyleParent="absolute top-[-30px] left-[-115px]">
+        <!-- projets -->
+        <div>
+          <p class="text-nowrap font-semibold">Projets :</p>
+          <span class="text-darkPrimary font-heading text-4xl">{repos.length}</span>
+        </div>
+        <!-- line -->
+        <div class="h-[2px] w-full bg-darkForeground"></div>
+        <!-- clients -->
+        <div>
+          <p class="text-nowrap font-semibold">Clients :</p>
+          <span class="text-darkPrimary font-heading text-4xl">2</span>
+        </div>
+      </Card>
+      <!-- rating -->
+      <Card addStyleParent="absolute bottom-[-30px] right-[-110px]">
+        <div>
+          <p class="text-nowrap font-semibold">Score :</p>
+          <span class="text-darkPrimary font-heading text-4xl">4.5</span>
+        </div>
+      </Card>
+    </Card>
+  </div>
