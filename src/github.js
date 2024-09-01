@@ -1,7 +1,11 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
-const GITHUB_API_URL = 'https://api.github.com/users/bnk4970/repos'; // Remplace par l'URL pour tes repositories
-const GITHUB_TOKEN = "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"; // Remplace par ton token GitHub
+dotenv.config();
+
+
+const GITHUB_API_URL = "https://api.github.com/users/BNK4970/repos";
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 export async function getRepositories() {
   try {
