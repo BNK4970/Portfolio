@@ -1,6 +1,6 @@
 ---
 import Card from "../Card.astro"
-import Button from "../Button.astro"
+import Button from "../CTA/Button.astro"
 
 import { getRepositories } from "../../github";
 const repos = await getRepositories();
@@ -10,7 +10,7 @@ const repos = await getRepositories();
 <Card>
     <div class="flex flex-col gap-4">
       <p class="text-xl">Hello there, my name is</p>
-      <h1 class="text-6xl text-darkPrimary">Cordovana Enzo</h1>
+      <h1 class="text-6xl w-fit text-transparent bg-clip-text bg-gradient-to-r from-darkPrimary to-darkSecondary">Cordovana Enzo</h1>
       <div class="flex items-center text-nowrap gap-4">
         <div class="w-full h-[2px] bg-darkForeground"></div>
         <p class="text-xl font-semibold">Font-end Web Developer</p>

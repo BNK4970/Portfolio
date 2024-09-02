@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar.astro";
 import Hero from "../components/section/Hero.astro";
 import Projects from "../components/section/Projects.astro";
 import Contact from "../components/section/Contact.astro";
+import About from "../components/section/About.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -19,7 +20,9 @@ import Contact from "../components/section/Contact.astro";
     </section>
 
     <!-- about -->
-    <section class="">à propos</section>
+    <section class="w-full h-full">
+      <About/>
+    </section>
 
     <!-- compétences -->
     <section>compétences</section>
@@ -91,6 +94,9 @@ animate();
 </Layout>
 
 <style>
+  .cercle {
+            clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 0% 0%);
+        }
   .astro-a {
     position: absolute;
     top: -32px;
