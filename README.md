@@ -1,135 +1,90 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
+# Portfolio v1
+
+Bienvenue sur mon portfolio ! Ce projet présente mes réalisations professionnelles et personnelles en tant que développeur front-end. Vous trouverez ici des exemples de mon travail, des projets récents et des informations sur mes compétences.
+## Table des matières
+
+ - [À propos](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Technologies utilisées](https://github.com/matiassingers/awesome-readme)
+ - [Projets](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [Installation]()
+ - [Utilisation]()
+ - [Contribuer]()
+ - [Contact]()
+ 
+
+
+## À propos
+
+Ce portfolio est conçu pour mettre en valeur mes projets et mes compétences en developpement web front-end. Il présente une variété de projets réalisés dans différents domaines, y compris three.Js, HTML & CSS, et Next Js Le site est construit avec les technologies suivantes.
+## Technologies utilisées
+
+- **Astro** : Un générateur de sites statiques rapide et moderne.
+- **TypeScript** : Ajoute des types statiques pour améliorer la qualité du code.
+- **Tailwind CSS** : Framework CSS utilitaire pour des designs élégants et responsives.
+- **Three.js** : Librairie JavaScript pour créer et afficher des graphiques 3D dans le navigateur.
+- **HTML** : Langage de balisage pour structurer le contenu du site web.
+
+## projets
+Voici quelques projets que vous trouverez dans ce portfolio :
+
+1. **Cyphub3D**
+- Description : Aucun descriptif fourni.
+- Technologies utilisées : [HTML, Three.js, Tailwind CSS, JS]
+- Lien : GitHub - Cyphub3D
+
+2. **SafetyCard**
+- Description : Site web d'un prototype développé par une équipe de GMP à l'IUT d'Aix.
+- Technologies utilisées : [HTML, CSS, JS]
+- Lien : GitHub - SafetyCard
+
+3. **TemplateTwo**
+- Description : Application Next.js avec le routeur App, authentification NextAuth (login/register), et configuration PostgreSQL.
+- Technologies utilisées : [TypeScript, Next.js, PostgreSQL, **Tailwind** CSS]
+- Lien : GitHub - TemplateTwo
+## Installation
+
+Pour cloner ce repository et le faire fonctionner localement, suivez ces étapes :
+
+- Clonez le repository :
+```bash
+    git clone https://github.com/BNK4970portfolio.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+- Accédez au répertoire du projet :
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+    cd portfolio
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Installez les dépendances :
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+    npm install
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Lancez le serveur de développement :
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+    npm run dev
+```
 
 
----
+## Utilisation
+
+Pour explorer le portfolio, lancez le serveur de développement local comme décrit ci-dessus et ouvrez le site dans votre navigateur. Vous pouvez naviguer entre les différentes sections pour voir mes projets, compétences, et plus encore.
 
 
+## Configuration
 
-1. Index (Accueil)
-Enzo Cordovana
-Développeur Web & Étudiant en Informatique
+Certaines configurations sensibles comme les jetons d'authentification ou les clés API peuvent être nécessaires pour le bon fonctionnement de certaines fonctionnalités. Créez un fichier .env à la racine du projet et ajoutez les variables suivantes :
 
-Bienvenue sur mon portfolio. Je suis Enzo Cordovana, étudiant en première année de BUT Informatique à l'IUT d'Aix. Passionné par le développement web, je crée des sites web pour m'exercer et approfondir mes compétences. Actuellement, je me concentre sur l'amélioration de mes compétences et sur l'intégration d'API comme GitHub pour enrichir mes projets.
-
-Projets principaux :
-(Note : Tu pourras ici afficher des vignettes cliquables pour tes projets une fois qu'ils seront disponibles.)
-
-Projet 1 : ...
-Projet 2 : ...
-Projet 3 : ...
-2. About (À propos)
-À propos de moi
-
-Je m'appelle Enzo Cordovana, et je suis actuellement étudiant en première année de BUT Informatique à l'IUT d'Aix. Avant d'intégrer ce programme, j'ai obtenu un BAC STI2D avec une option en Systèmes d'Information et Numérique (SIN), ce qui m'a permis de développer une solide base en informatique.
-
-Mon parcours universitaire actuel me permet de me spécialiser en développement web, un domaine qui me passionne particulièrement. J'aime concevoir des sites web et explorer de nouvelles technologies pour créer des solutions innovantes.
-
-Compétences :
-
-Langages de programmation : (ex. : HTML, CSS, JavaScript, etc. à préciser selon ton expérience)
-Outils/Logiciels : VSCode, Obsidian
-Autres compétences : (à préciser si besoin)
-Je m'efforce constamment de m'améliorer et de découvrir de nouveaux outils et méthodes pour optimiser mes projets. Actuellement, je travaille sur l'intégration de l'API GitHub pour enrichir mes projets web.
-
-3. Projets (Portfolio)
-(Une fois que tu auras des projets à partager, tu pourras les présenter ici.)
-
-Projet 1 : ...
-
-Client/Entreprise : (si applicable)
-Date :
-Mon rôle :
-Objectifs du projet :
-Solutions apportées :
-Résultats obtenus :
-Visuels associés : (captures d'écran, maquettes, etc.)
-(Tu pourras répéter ce format pour chaque projet que tu souhaites mettre en avant.)
-
-4. Contact
-Si tu souhaites discuter ou simplement me suivre, voici comment me contacter :
-
-Email : enzo.cordovana@etu.univ-amu.fr
-Réseaux sociaux :
-[LinkedIn](ton lien LinkedIn)
-[Instagram](ton lien Instagram)
+GITHUB_TOKEN="your_github_token_here"
 
 
+## Contact
+Vous pouvez me contacter via :
+- Email : [enzocordo66@gmail.com]
+- LinkedIn : [Votre profil LinkedIn]
+- GitHub : [Votre profil GitHub]
 
-
-colors: {
-				'text': 'rgb(var(--text))',
-				'background': 'rgb(var(--background))',
-				'primary': 'rgb(var(--primary))',
-				'secondary': 'rgb(var(--secondary))',
-				'accent': 'rgb(var(--accent))',
-			},
-			fontSize: {
-				sm: '0.800rem',
-				base: '1rem',
-				xl: '1.250rem',
-				'2xl': '1.563rem',
-				'3xl': '1.954rem',
-				'4xl': '2.442rem',
-				'5xl': '3.053rem',
-			},
-			fontFamily: {
-				heading: 'Bebas Neue',
-				body: 'Poppins',
-			},
-			fontWeight: {
-				normal: '400',
-				bold: '700',
-			},
